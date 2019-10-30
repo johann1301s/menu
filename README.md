@@ -13,7 +13,7 @@ Using a terminal, navigate to the project folder.
 ```
 $ cd menu
 ```
-Before you can start the development server, install all dependencies using Meteor's built in version of npm.
+Before you can start the development server, install all dependencies.
 ```
 $ npm install
 ```
