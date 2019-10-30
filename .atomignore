@@ -1,6 +1,7 @@
 .atomignore
 .gitignore
 package.json
+package-lock.json
 README.md
 yarn.lock
 node_modules
