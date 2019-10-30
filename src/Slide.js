@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Frame = styled.div`
   position: absolute;
@@ -7,7 +7,22 @@ const Frame = styled.div`
   width: 100%;
   background-color: red;
   box-shadow: 0px 0px 10px black;
-  left: ${ props => props.position ? '0px' : '30px' };
+  left: ${ props => props.position ? '0px' : '20px' };
+  animation-name: ${ props => props.position ? lol : lol2 };
+  animation-duration: 0.1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: normal;
+`;
+
+const lol = keyframes`
+  from  { left: 20px }
+  to { left: 0px }
+`;
+
+const lol2 = keyframes`
+  from  { left: 0px }
+  to { left: 20px }
 `;
 
 class Slide extends Component {
@@ -20,6 +35,8 @@ class Slide extends Component {
   }
 
   move(start, end) {
+
+    console.log(start + ' ' + end);
     this.setState({
       position: !this.state.position,
     });

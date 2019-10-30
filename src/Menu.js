@@ -19,8 +19,8 @@ class Menu extends Component {
   }
 
   get(slide, from) {
-    this.refs[slide].move();
-    this.refs[this.state.active].move();
+    this.refs[slide].move(from, 'center');
+    this.refs[this.state.active].move('center', 'left');
   }
 
   render() {
