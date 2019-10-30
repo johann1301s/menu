@@ -1,10 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
-
-const Menu = styled.div`
-  height: 100%;
-  width: 100%;
-`;
+import styled from 'styled-components';
+import Menu from './Menu.js';
 
 const Container = styled.div`
   position: absolute;
@@ -24,6 +20,7 @@ const Content = styled.div`
   height: 375px;
   width: 211px;
   overflow: hidden;
+  border-radius: 2px;
   background-color: lightgray;
 `;
 
