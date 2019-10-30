@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Slide001 from './Slide001.js';
-import Slide002 from './Slide002.js';
-import Slide003 from './Slide003.js';
-import Slide004 from './Slide004.js';
-import Slide005 from './Slide005.js';
+import Slide from './Slide.js';
+import Login from './Login.js';
+import Password from './Password.js';
 
 const Frame = styled.div`
   height: 100%;
@@ -16,15 +14,31 @@ class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      someData: true,
+      active: 'Login',
     }
+  }
+
+  get(slide, from) {
+    this.refs[slide].move();
+    this.refs[this.state.active].move();
   }
 
   render() {
 
     return (
       <Frame>
-        <Slide001/>
+
+        <Slide
+          ref={ "Login" }
+          component={ Login }
+          get={ this.get.bind(this) }/>
+
+
+        <Slide
+          ref={ "Password" }
+          component={ Password }
+          get={ this.get.bind(this) }/>
+
       </Frame>
     );
   }
