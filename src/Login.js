@@ -28,7 +28,7 @@ class Login extends Component {
 
     return (
       <Frame>
-        <Link onClick={ () => this.props.get('Login', 'right') }>
+        <Link onClick={ () => this.props.get('Password', 'r') }>
           Login
         </Link>
       </Frame>

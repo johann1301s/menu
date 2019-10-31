@@ -14,13 +14,18 @@ class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 'Login',
+      active: 'Password',
     }
   }
 
   get(slide, from) {
-    this.refs[slide].move(from, 'center');
-    this.refs[this.state.active].move('center', 'left');
+    let end = (from === 'r') ? 'l' : 'r';
+    this.refs[this.state.active].move('c', end);
+
+    this.refs[slide].move(from, 'c');
+    this.state = {
+      active: slide,
+    }
   }
 
   render() {
