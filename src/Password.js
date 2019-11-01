@@ -3,21 +3,32 @@ import styled from 'styled-components';
 
 const Frame = styled.div`
   position: absolute;
-  top: 100px;
   height: 100%
   width: 100%;
 `;
+
+const Header = styled.div`
+  height: 41px;
+  line-height: 40px;
+  width: 100%;
+  background-color: #F9F9F9;
+  border-bottom: 1px solid #ECECED;
+  box-sizing: border-box;
+  padding-left: 10px;
+`;
+
 
 const Link = styled.div`
   height: 41px;
   line-height: 40px;
   width: 100%;
-  background-color: gray;
-  border-bottom: 1px solid black;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ECECED;
   box-sizing: border-box;
+  padding-left: 10px;
 `;
 
-class Login extends Component {
+class Password extends Component {
 
   constructor(props) {
     super(props);
@@ -27,11 +38,16 @@ class Login extends Component {
   }
 
   render() {
-
     return (
       <Frame>
+        <Header>
+          Slide 1
+        </Header>
         <Link onClick={ () => this.props.get('Login', 'r') }>
-          Password
+          Right
+        </Link>
+        <Link onClick={ () => this.props.get('Login', 'l') }>
+          Left
         </Link>
       </Frame>
     );
@@ -39,4 +55,4 @@ class Login extends Component {
 
 }
 
-export default Login;
+export default Password;

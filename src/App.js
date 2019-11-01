@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Menu from './Menu.js';
+
+import Password from './Password.js';
+import Login from './Login.js';
 
 const Container = styled.div`
   position: absolute;
@@ -20,20 +23,41 @@ const Content = styled.div`
   height: 375px;
   width: 211px;
   overflow: hidden;
-  border-radius: 2px;
   background-color: lightgray;
+  border: 1px solid #ECECED;
+  box-sizing: border-box;
 `;
 
-function App() {
-  return (
-    <div className="App">
-      <Container>
-        <Content>
-          <Menu/>
-        </Content>
-      </Container>
-    </div>
-  );
+class App extends Component  {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    //console.log(this.refs.myRef.refs.Login)
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Container>
+          <Content>
+            <Menu
+              ref='myRef'>
+
+              <Login
+                slide="Login"/>
+
+              <Password
+                slide="Password"/>
+
+            </Menu>
+          </Content>
+        </Container>
+      </div>
+    );
+  }
 }
 
 export default App;

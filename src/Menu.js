@@ -23,27 +23,27 @@ class Menu extends Component {
     this.refs[this.state.active].move('c', end);
 
     this.refs[slide].move(from, 'c');
-    this.state = {
+    this.setState({
       active: slide,
-    }
+    });
   }
 
   render() {
+    const childrenWithProps = React.Children.map(this.props.children, (child) => {
+      let element = React.cloneElement(child, { get: this.get.bind(this) });
+      let e = (
+        <Slide
+          ref={ child.props.slide }
+          get={ this.get.bind(this) }>
+          {element}
+        </Slide>
+      );
+      return e;
+    });
 
     return (
       <Frame>
-
-        <Slide
-          ref={ "Login" }
-          component={ Login }
-          get={ this.get.bind(this) }/>
-
-
-        <Slide
-          ref={ "Password" }
-          component={ Password }
-          get={ this.get.bind(this) }/>
-
+        { childrenWithProps }
       </Frame>
     );
   }
