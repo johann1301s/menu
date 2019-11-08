@@ -53,10 +53,6 @@ class App extends Component  {
     }
   }
 
-  componentDidMount() {
-    this.refs.menu.refs.Login.refs.Login.kuk();
-  }
-
   render() {
     return (
       <div className="App">
