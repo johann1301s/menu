@@ -6,11 +6,11 @@ const Frame = styled.div`
   height: 100%;
   width: 100%;
   background-color: white;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 10px rgba(154,154,154,.75);
   left: ${ props => props.position };
   animation-duration: 0.4s;
   animation-iteration-count: 1;
-  animation-timing-function: swing;
+  animation-timing-function: ease;
   animation-direction: normal;
   animation-delay: 0s;
   animation-name: ${ props => eval(props.keyframe) };
@@ -85,9 +85,9 @@ class Slide extends Component {
         position={ this.state.position }>
 
         <Component
-          { ...this.props.slide.props }
+          get={ this.props.get }
           ref={ this.props.slide.name }
-          get={ this.props.get }/>
+          { ...this.props.slide.props }/>
 
       </Frame>
     );
