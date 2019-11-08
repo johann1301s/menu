@@ -37,10 +37,6 @@ class Login extends Component {
     }
   }
 
-  kuk() {
-    console.log(4567);
-  }
-
   render() {
 
     return (
