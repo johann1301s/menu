@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Slide from './Slide.js';
-import Login from './Login.js';
-import Password from './Password.js';
+
 
 const Frame = styled.div`
   height: 100%;
@@ -28,22 +27,28 @@ class Menu extends Component {
     });
   }
 
-  render() {
-    const childrenWithProps = React.Children.map(this.props.children, (child) => {
-      let element = React.cloneElement(child, { get: this.get.bind(this) });
-      let e = (
-        <Slide
-          ref={ child.props.slide }
-          get={ this.get.bind(this) }>
-          {element}
-        </Slide>
-      );
-      return e;
+  slides(object) {
+    return Object.keys(object).map((key, index) => {
+      let obj = object[key];
+      obj['name'] = key;
+      return obj;
     });
+  }
 
+  render() {
     return (
       <Frame>
-        { childrenWithProps }
+
+        { this.slides(this.props.slides).map((slide, index) => {
+          return (
+            <Slide
+              key={ index }
+              slide={ slide }
+              get={ this.get.bind(this) }
+              ref={ slide.name }/>
+          );
+        }) }
+
       </Frame>
     );
   }

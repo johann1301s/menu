@@ -76,12 +76,19 @@ class Slide extends Component {
 
   render() {
 
+    const Component = this.props.slide.component;
+
     return (
       <Frame
         index={ this.state.index }
         keyframe={ this.state.keyframe }
         position={ this.state.position }>
-        { this.props.children }
+
+        <Component
+          { ...this.props.slide.props }
+          ref={ this.props.slide.name }
+          get={ this.props.get }/>
+
       </Frame>
     );
   }

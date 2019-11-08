@@ -32,10 +32,29 @@ class App extends Component  {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      slides: {
+        'Login': {
+          component: Login,
+          props: {
+            myFirstProp: 'someValue',
+            mySecondProp: 'someOtherValue',
+          },
+        },
+        'Password': {
+          component: Password,
+          props: {
+            myFirstProp: 'someValue',
+            mySecondProp: 'someOtherValue',
+          },
+        },
+      }
+    }
   }
 
   componentDidMount() {
-    //console.log(this.refs.myRef.refs.Login)
+    this.refs.menu.refs.Login.refs.Login.kuk();
   }
 
   render() {
@@ -43,16 +62,11 @@ class App extends Component  {
       <div className="App">
         <Container>
           <Content>
+
             <Menu
-              ref='myRef'>
+              ref={ 'menu' }
+              slides={ this.state.slides }/>
 
-              <Login
-                slide="Login"/>
-
-              <Password
-                slide="Password"/>
-
-            </Menu>
           </Content>
         </Container>
       </div>
