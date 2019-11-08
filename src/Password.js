@@ -38,6 +38,7 @@ class Password extends Component {
   }
 
   render() {
+
     return (
       <Frame>
         <Header>
