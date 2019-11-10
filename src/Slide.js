@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 const Frame = styled.div`
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: calc(100% + ${ props => 20 }px);
   background-color: white;
   box-shadow: 0px 0px 10px rgba(154,154,154,.75);
   left: ${ props => props.position };
@@ -12,7 +12,6 @@ const Frame = styled.div`
   animation-iteration-count: 1;
   animation-timing-function: ease;
   animation-direction: normal;
-  animation-delay: 0s;
   animation-name: ${ props => eval(props.keyframe) };
   z-index: ${ props => props.index };
 `;
