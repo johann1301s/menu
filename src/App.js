@@ -34,22 +34,49 @@ class App extends Component  {
     super(props);
 
     this.state = {
-      slides: {
-        'Login': {
-          component: Login,
-          props: {
-            myFirstProp: 'someValue',
-            mySecondProp: 'someOtherValue',
+      menu: {
+        slides: {
+          'Login': {
+            component: Login,
+            props: {
+              myFirstProp: 'someValue',
+              mySecondProp: 'someOtherValue',
+            },
+          },
+          'Password': {
+            component: Password,
+            props: {
+              myFirstProp: 'someValue',
+              mySecondProp: 'someOtherValue',
+            },
           },
         },
-        'Password': {
-          component: Password,
-          props: {
-            myFirstProp: 'someValue',
-            mySecondProp: 'someOtherValue',
+        settings: {
+          shadow: {
+            color: {
+              red: 154,
+              green: 154,
+              blue: 154,
+              alpha: 0.75,
+            },
+            spread: 10,
+            blur: 0,
+            vOffset: 0,
+            hOffset: 0,
           },
+          animation: {
+            duration: 0.4,
+            bezier: {
+              x1: 0.25,
+              y1: 0.1,
+              x2: 0.25,
+              y2: 1,
+            }
+          },
+          active: 'Login',
         },
       }
+
     }
   }
 
@@ -61,7 +88,8 @@ class App extends Component  {
 
             <Menu
               ref={ 'menu' }
-              slides={ this.state.slides }/>
+              settings={ this.state.menu.settings }
+              slides={ this.state.menu.slides }/>
 
           </Content>
         </Container>
