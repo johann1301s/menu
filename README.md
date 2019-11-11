@@ -21,3 +21,32 @@ Then start the server.
 ```
 $ yarn start
 ```
+
+## Usage
+
+Usage of the react component.
+```
+<Menu
+  slides={ slidesObject }
+  settings={ settingsObject }/>
+```
+
+The slides prop contains all data regarding the slides as an object.
+```
+slides: {
+  'Login': {
+    component: Login,
+    props: {
+      myFirstProp: 'someValue',
+      mySecondProp: 'someOtherValue',
+    }
+  },
+  'Password': {
+    component: Password,
+    props: {
+      myFirstProp: 'someValue',
+      mySecondProp: 'someOtherValue',
+    }
+  },
+}
+```
