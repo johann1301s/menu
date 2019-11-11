@@ -83,7 +83,7 @@ settingsObject = {
 },
 ```
 
-Each component you in the slides object gets passed into each slide container along with the props you provide and a function to change to a new slide.
+Each component in the slides object gets passed into each slide container along with the props you provide and a function to change to a new slide.
 
 ```
 this.props.get('Login', 'r');
