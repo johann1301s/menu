@@ -94,6 +94,26 @@ The first argument is the name of the new slide and the second argument decides 
 
 It is intended that each slide has a shadow, and this shadow spans an area over other slides. Therefore a slide lying to the right, cant lie immediately next to the active slide because this would show an unwanted shadow and introduce a gap during animation. The best way to solve this is to introduce a spacing between the slides on the right and the active slide. This spacing is set to equal the sum of the shadows blur and spread. The width of the slides is equal to the width of the menu container plus the spacing. Make sure to keep this in mind when you start implementing each slides content.
 
+The width of the slide container.
+
 ```
 width: calc( 100% + ${ spread + blur } );
 ```
+
+To overcome this, i suggest setting the width of the content using calc.
+
+```
+width: calc( 100% - ${ spread + blur } );
+```
+
+Or using absolute positioning.
+
+```
+position: absolute;
+left: 0px;
+right: ${ spread + blur };
+```
+
+Also, some content is intended to equal the full width of the slide container. Such as section lines, background colors and other markup structure.
+
+If you don't like this width implementation, i suggest you use a custom transparent overlay on the slides moving from center to left and remove the shadow in the settings object.
