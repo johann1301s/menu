@@ -53,20 +53,32 @@ slides: {
 
 And the settings prop contains all data regarding the menu settings.
 ```
-slides: {
-  'Login': {
-    component: Login,
-    props: {
-      myFirstProp: 'someValue',
-      mySecondProp: 'someOtherValue',
-    }
+settings: {
+  shadow: {
+    color: {
+      red: 154,
+      green: 154,
+      blue: 154,
+      alpha: 0.75,
+    },
+    spread: 0,
+    blur: 10,
+    vOffset: 0,
+    hOffset: 0,
   },
-  'Password': {
-    component: Password,
-    props: {
-      myFirstProp: 'someValue',
-      mySecondProp: 'someOtherValue',
-    }
+  animation: {
+    duration: 0.4,
+    bezier: {
+      x1: 0.25,
+      y1: 0.1,
+      x2: 0.25,
+      y2: 1,
+    },
   },
-}
+  active: 'Password',
+  left: {
+    value: 40,
+    unit: '%',
+  },
+},
 ```
