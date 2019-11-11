@@ -1,6 +1,6 @@
 ## About
 
-A slide menu as often used in touch settings app.
+A slide menu as often used in touch settings app. Be sure to read the important notes section.
 
 ## Demo
 
@@ -33,7 +33,7 @@ Usage of the react component.
 
 The slides prop contains all data regarding the slides as an object.
 ```
-slides: {
+slides = {
   'Login': {
     component: Login,
     props: {
@@ -53,7 +53,7 @@ slides: {
 
 And the settings prop contains all data regarding the menu settings.
 ```
-settings: {
+settings = {
   shadow: {
     color: {
       red: 154,
@@ -81,4 +81,16 @@ settings: {
     unit: '%',
   },
 },
+```
+
+## Demo
+
+A slide has a shadow, and this shadow spans an area over other slides. Therefore a slide lying to the right, cant lie next to the active slide because this would show an unwanted shadow. The best way to solve this is to introduce a spacing between the slides on the right and the active slide. This spacing is set to equal the shadows blur and spread. The width of the slides is also greater than the frame of the menu.
+
+```
+spacing = spread + blur;
+```
+
+```
+width: calc(100% + ${spacing})
 ```
