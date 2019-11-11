@@ -18,9 +18,22 @@ class Menu extends Component {
   }
 
   get(slide, from) {
-    let end = (from === 'r') ? 'l' : 'r';
+
+    // check from is either 'r' or 'l'
+    if (!(from === 'r' || from === 'l')) {
+      return;
+    }
+
+    // check slide exists
+    if (!this.refs[slide]) {
+      return;
+    }
+
+    // move active slide
+    const end = (from === 'r') ? 'l' : 'r';
     this.refs[this.state.active].move('c', end);
 
+    // move new slide
     this.refs[slide].move(from, 'c');
     this.setState({
       active: slide,
