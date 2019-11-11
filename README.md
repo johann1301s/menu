@@ -85,7 +85,7 @@ settingsObject = {
 
 ## Important notes
 
-A slide has a shadow, and this shadow spans an area over other slides. Therefore a slide lying to the right, cant lie next to the active slide because this would show an unwanted shadow. The best way to solve this is to introduce a spacing between the slides on the right and the active slide. This spacing is set to equal the sum of the shadows blur and spread. The width of the slides is also greater than the frame of the menu. Make sure to keep this in mind when you start implementing each slides content.
+It is intended that each slide has a shadow, and this shadow spans an area over other slides. Therefore a slide lying to the right, cant lie next to the active slide because this would show an unwanted shadow and introduce a gap during animation. The best way to solve this is to introduce a spacing between the slides on the right and the active slide. This spacing is set to equal the sum of the shadows blur and spread. The width of the slides is equal to the width of the menu container plus the spacing. Make sure to keep this in mind when you start implementing each slides content.
 
 ```
 spacing = spread + blur;
