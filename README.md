@@ -83,7 +83,7 @@ settings = {
 },
 ```
 
-## Demo
+## Important notes
 
 A slide has a shadow, and this shadow spans an area over other slides. Therefore a slide lying to the right, cant lie next to the active slide because this would show an unwanted shadow. The best way to solve this is to introduce a spacing between the slides on the right and the active slide. This spacing is set to equal the shadows blur and spread. The width of the slides is also greater than the frame of the menu.
 
