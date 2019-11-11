@@ -92,5 +92,5 @@ spacing = spread + blur;
 ```
 
 ```
-width: calc(100% + ${spacing})
+width: calc( 100% + ${spacing} );
 ```
