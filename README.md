@@ -116,4 +116,4 @@ right: ${ spread + blur };
 
 Also, some content is intended to equal the full width of the slide container. Such as section lines, background colors and other markup structure.
 
-If you don't like this width implementation, i suggest you use a custom transparent overlay on the slides moving from center to left and remove the shadow in the settings object.
+If you don't like this width implementation, i suggest you use a darkened custom transparent overlay on the slides moving from center to left and remove the shadow in the settings object.
