@@ -33,7 +33,7 @@ Usage of the react component.
 
 The slides prop contains all data regarding the slides as an object.
 ```
-slides = {
+slidesObject = {
   'Login': {
     component: Login,
     props: {
@@ -53,7 +53,7 @@ slides = {
 
 And the settings prop contains all data regarding the menu settings.
 ```
-settings = {
+settingsObject = {
   shadow: {
     color: {
       red: 154,
