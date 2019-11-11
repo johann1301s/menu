@@ -13,7 +13,7 @@ class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 'Password',
+      active: this.props.settings.active,
     }
   }
 
@@ -36,6 +36,7 @@ class Menu extends Component {
   }
 
   render() {
+
     return (
       <Frame>
 
@@ -44,6 +45,8 @@ class Menu extends Component {
             <Slide
               key={ index }
               slide={ slide }
+              active={ this.state.active === slide.name }
+              settings={ this.props.settings }
               get={ this.get.bind(this) }
               ref={ slide.name }/>
           );

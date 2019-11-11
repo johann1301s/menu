@@ -42,13 +42,13 @@ class Password extends Component {
     return (
       <Frame>
         <Header>
-          Slide 1
+          Password
         </Header>
         <Link onClick={ () => this.props.get('Login', 'r') }>
-          Right
+          Get Login slide from right
         </Link>
         <Link onClick={ () => this.props.get('Login', 'l') }>
-          Left
+          Get Login slide from left
         </Link>
       </Frame>
     );

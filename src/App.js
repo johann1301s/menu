@@ -59,8 +59,8 @@ class App extends Component  {
               blue: 154,
               alpha: 0.75,
             },
-            spread: 10,
-            blur: 0,
+            spread: 0,
+            blur: 10,
             vOffset: 0,
             hOffset: 0,
           },
@@ -71,11 +71,15 @@ class App extends Component  {
               y1: 0.1,
               x2: 0.25,
               y2: 1,
-            }
+            },
           },
-          active: 'Login',
+          active: 'Password',
+          left: {
+            value: 40,
+            unit: '%',
+          },
         },
-      }
+      },
 
     }
   }
@@ -87,9 +91,8 @@ class App extends Component  {
           <Content>
 
             <Menu
-              ref={ 'menu' }
-              settings={ this.state.menu.settings }
-              slides={ this.state.menu.slides }/>
+              slides={ this.state.menu.slides }
+              settings={ this.state.menu.settings }/>
 
           </Content>
         </Container>
