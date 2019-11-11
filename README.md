@@ -83,6 +83,13 @@ settingsObject = {
 },
 ```
 
+Each component you in the slides object gets passed into each slide container along with the props you provide and a function to change to a new slide.
+
+```
+this.props.get('Login', 'r');
+```
+
+The first argument is the name of the new slide and the second argument decides if the new slide is to enter from right or left. Valid values are therefore 'l' and 'r'.
 ## Important notes
 
 It is intended that each slide has a shadow, and this shadow spans an area over other slides. Therefore a slide lying to the right, cant lie next to the active slide because this would show an unwanted shadow and introduce a gap during animation. The best way to solve this is to introduce a spacing between the slides on the right and the active slide. This spacing is set to equal the sum of the shadows blur and spread. The width of the slides is equal to the width of the menu container plus the spacing. Make sure to keep this in mind when you start implementing each slides content.
