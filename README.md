@@ -50,3 +50,23 @@ slides: {
   },
 }
 ```
+
+And the settings prop contains all data regarding the menu settings.
+```
+slides: {
+  'Login': {
+    component: Login,
+    props: {
+      myFirstProp: 'someValue',
+      mySecondProp: 'someOtherValue',
+    }
+  },
+  'Password': {
+    component: Password,
+    props: {
+      myFirstProp: 'someValue',
+      mySecondProp: 'someOtherValue',
+    }
+  },
+}
+```
