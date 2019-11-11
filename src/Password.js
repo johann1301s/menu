@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Frame = styled.div`
   position: absolute;
-  height: 100%
+  height: 100%;
   width: 100%;
 `;
 
