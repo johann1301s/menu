@@ -120,7 +120,7 @@ If you don't like this width implementation, i suggest you use a darkened custom
 
 This somewhat strange implementation is favored over other alternatives such as using a delay, because it is more favorable for the end user as well as it is easier to implement for cross browser support and bezier customization.
 
-## Bezier
+#### Bezier
 
 The four values in the bezier object determines the progress of the animation. Here are some common settings for the [basic css transition timing functions](https://www.w3.org/TR/css-easing-1/#cubic-bzier-easing-function).
 
