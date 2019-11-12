@@ -26,9 +26,7 @@ $ yarn start
 
 Usage of the react component.
 ```
-<Menu
-  slides={ slidesObject }
-  settings={ settingsObject }/>
+<Menu slides={ slidesObject } settings={ settingsObject }/>
 ```
 
 The slides prop object contains all data regarding the slides and the settings prop object contains all data regarding the menu settings. See sections below for details.
