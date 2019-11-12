@@ -92,6 +92,13 @@ settingsObject = {
   },
 },
 ```
+#### Left
+
+This value determines the distance the active slide should animate to the left.
+
+#### Active
+
+This value determines which slide should be visible at initial render.
 
 #### Bezier
 
