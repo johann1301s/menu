@@ -33,14 +33,6 @@ Usage of the react component.
 
 The slides prop object contains all data regarding the slides and the settings prop object contains all data regarding the menu settings. See sections below for details.
 
-Each component in the slides object gets passed into each slide container along with the props you provide and a function to change to a new slide.
-
-```
-this.props.get('Login', 'r');
-```
-
-The first argument is the name of the new slide and the second argument decides if the new slide is to enter from right or left. Valid values are 'r' and 'l'.
-
 ## Important notes
 
 It is intended that each slide has a shadow, and this shadow spans an area over other slides. Therefore a slide lying to the right, cant lie immediately next to the menu container because this would show an unwanted shadow on the active slide. The best way to solve this is to extend the width of the slide container. This extended spacing is set to equal the sum of the shadows blur and spread. The slides on the right will now lie immediately next to the active slide. This extended width will make sure no gap appears during animation and that no shadow is visible on the active slide. Make sure to keep this in mind when you start implementing the component content in each slide.
@@ -178,3 +170,11 @@ slidesObject = {
   },
 }
 ```
+
+Each component in the slides object gets passed into each slide container along with the props you provide and a function to change to a new slide.
+
+```
+this.props.get('Login', 'r');
+```
+
+The first argument is the name of the new slide and the second argument decides if the new slide is to enter from right or left. Valid values are 'r' and 'l'.
