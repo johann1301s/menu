@@ -12,24 +12,20 @@ class Menu extends Component {
 
   constructor(props) {
     super(props);
+    this.animating = false;
     this.state = {
       active: this.props.settings.active,
-      animating: false,
     }
   }
 
   get(slide, from) {
 
-    if (this.state.animating) {
+    if (this.animating) {
       return;
     } else {
-      this.setState({
-        animating: true,
-      })
+      this.animating = true;
       setTimeout(() => {
-        this.setState({
-          animating: false,
-        })
+        this.animating = false;
       },
       this.props.settings.animation.duration*1000);
     }
