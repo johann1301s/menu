@@ -124,7 +124,7 @@ This somewhat strange implementation is favored over other alternatives such as 
 
 The four values in the bezier object determines the progress of the animation. Here are some common settings for the [basic css transition timing functions](https://www.w3.org/TR/css-easing-1/#valdef-cubic-bezier-easing-function-ease).
 
-Ease
+[Ease](https://www.w3.org/TR/css-easing-1/#valdef-cubic-bezier-easing-function-ease)
 ```
 bezier: {
   x1: 0.25,
@@ -134,7 +134,7 @@ bezier: {
 }
 ```
 
-Ease-in
+[Ease-in](https://www.w3.org/TR/css-easing-1/#valdef-cubic-bezier-easing-function-ease-in)
 ```
 bezier: {
   x1: 0.42,
@@ -144,7 +144,7 @@ bezier: {
 }
 ```
 
-Ease-out
+[Ease-out](https://www.w3.org/TR/css-easing-1/#valdef-cubic-bezier-easing-function-ease-out)
 ```
 bezier: {
   x1: 0,
@@ -154,12 +154,22 @@ bezier: {
 }
 ```
 
-Ease-in-out
+[Ease-in-out](https://www.w3.org/TR/css-easing-1/#valdef-cubic-bezier-easing-function-ease-in-out)
 ```
 bezier: {
   x1: 0.42,
   y1: 0,
   x2: 0.58,
   y2: 1
+}
+```
+
+Linear (example)
+```
+bezier: {
+  x1: 0.25,
+  y1: 0.25,
+  x2: 0.75,
+  y2: 0.75
 }
 ```
