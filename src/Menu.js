@@ -14,10 +14,25 @@ class Menu extends Component {
     super(props);
     this.state = {
       active: this.props.settings.active,
+      animating: false,
     }
   }
 
   get(slide, from) {
+
+    if (this.state.animating) {
+      return;
+    } else {
+      this.setState({
+        animating: true,
+      })
+      setTimeout(() => {
+        this.setState({
+          animating: false,
+        })
+      },
+      this.props.settings.animation.duration*1000);
+    }
 
     // check from is either 'r' or 'l'
     if (!(from === 'r' || from === 'l')) {
