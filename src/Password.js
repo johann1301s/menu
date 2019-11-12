@@ -5,6 +5,12 @@ const Frame = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 `;
 
 const Header = styled.div`
@@ -26,6 +32,7 @@ const Link = styled.div`
   border-bottom: 1px solid #ECECED;
   box-sizing: border-box;
   padding-left: 10px;
+  cursor: pointer;
 `;
 
 class Password extends Component {
