@@ -122,7 +122,7 @@ This somewhat strange implementation is favored over other alternatives such as 
 
 ## Bezier
 
-The four values in the bezier object determines the progress of the animation. Here are some common settings for the [basic css transition timing functions](https://www.w3.org/TR/css-easing-1/#valdef-cubic-bezier-easing-function-ease).
+The four values in the bezier object determines the progress of the animation. Here are some common settings for the [basic css transition timing functions](https://www.w3.org/TR/css-easing-1/#cubic-bzier-easing-function).
 
 [Ease](https://www.w3.org/TR/css-easing-1/#valdef-cubic-bezier-easing-function-ease)
 ```
