@@ -24,7 +24,6 @@ $ yarn start
 
 ## Usage
 
-Usage of the react component.
 ```
 <Menu slides={ slidesObject } settings={ settingsObject }/>
 ```
